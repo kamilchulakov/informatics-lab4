@@ -8,7 +8,7 @@ def process(data, lang="en"):
     if lang == "ru":
         regex = r"[А-Я][А-я;:’—'\–\-\s]*,[А-я,;:’—'\–\-\s]*!"
     elif lang == "es":
-        regex = r"¡[A-Z][A-zñ;:’—'\–\-\s]*,[A-zñ,;:’—'\–\-\s]*!"
+        regex = r"¡[A-ZÑ][A-zÑñ;:’—'\–\-\s]*,[A-zÑñ,;:’—'\–\-\s]*!"
     elif lang == "de":
         regex = r"[A-ZÄÖÜß][A-zÄÖÜßäöüß;:’—'\–\-\s]*,[A-zÄÖÜßäöüß,;:’—'\–\-\s]*!"
     return re.findall(regex, data)
